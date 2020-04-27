@@ -14,8 +14,18 @@ public class GameManager : MonoBehaviour
     public string url;
     Image image;
     TextMeshProUGUI text;
+
+    private string path;
+
     void Start()
     {
+#if UNITY_ANDROID && !UNITY_EDITOR
+        //path = Path.Combine(Application.persistentDataPath, "PersonData/data.json");
+        path = Path.Combine(Application.streamingAssetsPath, "PersonData/data.json");
+#else
+        path = Path.Combine(Application.streamingAssetsPath, "PersonData/data.json");
+#endif
+        Debug.Log(path);
         Debug.Log("Started");
         ReadJson();
         StartCoroutine(SetInfo());
@@ -24,7 +34,8 @@ public class GameManager : MonoBehaviour
     public PersonDataList PersonDataList = new PersonDataList();
     public void ReadJson()
     {
-        string json = File.ReadAllText(Application.dataPath + "/PersonData/data.json");
+        string json = File.ReadAllText(path);
+        //string json = File.ReadAllText(Application.dataPath + "/PersonData/data.json");
         JsonUtility.FromJsonOverwrite(json, PersonDataList);
         Debug.Log(PersonDataList.PersonData[0].url);
         Debug.Log(PersonDataList.PersonData[1].name);
