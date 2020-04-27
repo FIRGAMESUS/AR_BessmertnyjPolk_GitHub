@@ -728,4 +728,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/MainScene.unity
-  playerPath: C:/Unity Engine/UnityProjects/AR_BessmertnyjPolk_GitHub/AR_BessmertnyjPolk/Versions/SetTwoInfos.apk
+  playerPath: C:/UnityEngine/UnityProjects/AR_BessmertnyjPolk_GitHub/AR_BessmertnyjPolk/Versions/SetTwoInfos.apk
