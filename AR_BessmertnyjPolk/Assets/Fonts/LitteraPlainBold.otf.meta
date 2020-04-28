@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: 6381791e91f86e64ebd1e81b6a7f6532
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Littera Plain
+  fontNames:
+  - Littera Plain
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 12ed9bca9e096ce4bbcdf9086d089997, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

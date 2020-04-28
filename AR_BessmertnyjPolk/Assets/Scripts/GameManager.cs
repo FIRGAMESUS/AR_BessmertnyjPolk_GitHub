@@ -14,17 +14,22 @@ public class GameManager : MonoBehaviour
     public string url;
     Image image;
     TextMeshProUGUI text;
+    public Sprite DefaultPhoto;
 
     private string path;
-    private string fileName = "data";
+    private int tabletsCount;
 
     void Start()
     {
-        path = Application.streamingAssetsPath + "/PersonData/data.json";
-
-        Debug.Log(path);
-        Debug.Log("Started");
+        tabletsCount = Tablets.childCount;
+        path = Application.streamingAssetsPath + "/PersonData/data_file.json";
         ReadJson();
+        UpdateTablets();
+        Debug.Log("Started");
+    }
+
+    public void UpdateTablets()
+    {
         StartCoroutine(SetInfo());
     }
     
@@ -43,28 +48,47 @@ public class GameManager : MonoBehaviour
             json = File.ReadAllText(path);
         }
         JsonUtility.FromJsonOverwrite(json, PersonDataList);
-        Debug.Log(PersonDataList.PersonData[0].url);
-        Debug.Log(PersonDataList.PersonData[1].name);
         Debug.Log(PersonDataList.PersonData.Count);
+    }
+
+    public void OpenURL()
+    {
+        Debug.Log("click");
+        Application.OpenURL(PersonDataList.PersonData[0].url);
     }
     
 
     Texture myTexture;
     IEnumerator SetInfo()
     {
+        List<int> currentPersons = new List<int>();
+        //List<int> currentTablets = new List<int>();
+        int currentPerson;
+        for (int i = 0; i < tabletsCount; i++)
+        {
+            do
+            {
+                currentPerson = Random.Range(0, PersonDataList.PersonData.Count);
+            } while (currentPersons.IndexOf(currentPerson) >= 0);
+            currentPersons.Add(currentPerson);
+        }
         int id = 0;
         foreach (Transform Tablet in Tablets)
         {
-            var person = PersonDataList.PersonData[id];
-            UnityWebRequest www = UnityWebRequestTexture.GetTexture(person.url);
-            yield return www.SendWebRequest();
+            var person = PersonDataList.PersonData[currentPersons[id]];
 
-            if (www.isNetworkError || www.isHttpError) Debug.Log(www.error);
-            else myTexture = ((DownloadHandlerTexture)www.downloadHandler).texture;
-            Sprite photo = Sprite.Create((Texture2D)myTexture, new Rect(0, 0, myTexture.width, myTexture.height), Vector2.zero);
-            Debug.Log("Loaded");
+            Sprite photo;
+            if (person.photo.IndexOf("svg") > 0) photo = DefaultPhoto;
+            else
+            {
+                UnityWebRequest www = UnityWebRequestTexture.GetTexture(person.photo);
+                yield return www.SendWebRequest();
 
-            var data = PersonDataList.PersonData[id];
+                if (www.isNetworkError || www.isHttpError) Debug.Log(www.error);
+                else myTexture = ((DownloadHandlerTexture)www.downloadHandler).texture;
+                photo = Sprite.Create((Texture2D)myTexture, new Rect(0, 0, myTexture.width, myTexture.height), Vector2.zero);
+            }
+
             Tablet.GetChild(0).Find("Image").GetComponent<Image>().color = new Color(255, 255, 255, 1);
             Tablet.GetChild(0).Find("Image").GetComponent<Image>().sprite = photo;
             Tablet.GetChild(0).Find("Text").GetComponent<TextMeshProUGUI>().text = person.name;
@@ -78,6 +102,7 @@ public class GameManager : MonoBehaviour
 public class PersonData
 {
     public string url;
+    public string photo;
     public string name;
 }
 [System.Serializable]
