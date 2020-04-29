@@ -16,16 +16,36 @@ public class GameManager : MonoBehaviour
     TextMeshProUGUI text;
     public Sprite DefaultPhoto;
 
+
     private string path;
     private int tabletsCount;
 
     void Start()
     {
         tabletsCount = Tablets.childCount;
-        path = Application.streamingAssetsPath + "/PersonData/data_file.json";
+        path = Application.streamingAssetsPath + "/PersonData/data" + Random.Range(1, 5) + ".json";
+
+
+        Debug.Log(path);
+
+
         ReadJson();
         UpdateTablets();
         Debug.Log("Started");
+    }
+
+    public string RandomData()
+    {
+        string _path;
+        string path0 = Application.streamingAssetsPath + "/PersonData";
+        string[] fileNames = Directory.GetFiles(path0);
+        List<string> jsonPaths = new List<string>();
+        foreach (var i in fileNames)
+        {
+            if ((i.Contains(".json")) && !(i.Contains(".meta"))) jsonPaths.Add(i);
+        }
+        _path = jsonPaths[Random.Range(0, jsonPaths.Count)];
+        return _path;
     }
 
     public void UpdateTablets()
@@ -36,10 +56,11 @@ public class GameManager : MonoBehaviour
     public PersonDataList PersonDataList = new PersonDataList();
     public void ReadJson()
     {
+        Debug.Log("Read STARTED");
         string json;
         if (Application.platform == RuntimePlatform.Android)
         {
-            UnityWebRequest www = UnityEngine.Networking.UnityWebRequest.Get(path);
+            UnityWebRequest www = UnityWebRequest.Get(path);
             www.SendWebRequest();
             json = www.downloadHandler.text;
         }
@@ -47,8 +68,10 @@ public class GameManager : MonoBehaviour
         {
             json = File.ReadAllText(path);
         }
+        Debug.Log("Read json");
         JsonUtility.FromJsonOverwrite(json, PersonDataList);
         Debug.Log(PersonDataList.PersonData.Count);
+        Debug.Log("Read FINISHED");
     }
 
     public void OpenURL()
@@ -102,8 +125,8 @@ public class GameManager : MonoBehaviour
 public class PersonData
 {
     public string url;
-    public string photo;
     public string name;
+    public string photo;
 }
 [System.Serializable]
 public class PersonDataList

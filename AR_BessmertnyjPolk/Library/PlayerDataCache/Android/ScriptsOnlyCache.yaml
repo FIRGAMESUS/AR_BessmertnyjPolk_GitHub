@@ -267,7 +267,7 @@ ScriptsOnlyBuild:
     className: AnimationTrack
   - hash:
       serializedVersion: 2
-      Hash: f4047553231a6d68901a8c51ef06bc98
+      Hash: 8c9099f68ae24fde59a31b28e02e6a60
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -736,4 +736,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/MainScene.unity
-  playerPath: C:/UnityEngine/UnityProjects/AR_BessmertnyjPolk_GitHub/AR_BessmertnyjPolk/Versions/4photos.apk
+  playerPath: C:/UnityEngine/UnityProjects/AR_BessmertnyjPolk_GitHub/AR_BessmertnyjPolk/Versions/bigdata.apk
