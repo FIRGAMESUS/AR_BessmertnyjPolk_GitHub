@@ -20,10 +20,10 @@ public class GameManager : MonoBehaviour
     private string path;
     private int tabletsCount;
 
-    void Start()
+    public void Start()
     {
         tabletsCount = Tablets.childCount;
-        path = Application.streamingAssetsPath + "/PersonData/data" + Random.Range(1, 5) + ".json";
+        path = RandomDataPath();
 
 
         Debug.Log(path);
@@ -34,17 +34,16 @@ public class GameManager : MonoBehaviour
         Debug.Log("Started");
     }
 
-    public string RandomData()
+    public string RandomDataPath()
     {
-        string _path;
-        string path0 = Application.streamingAssetsPath + "/PersonData";
-        string[] fileNames = Directory.GetFiles(path0);
-        List<string> jsonPaths = new List<string>();
-        foreach (var i in fileNames)
+        List<string> paths = new List<string>()
         {
-            if ((i.Contains(".json")) && !(i.Contains(".meta"))) jsonPaths.Add(i);
-        }
-        _path = jsonPaths[Random.Range(0, jsonPaths.Count)];
+            Application.streamingAssetsPath + "/PersonData/data1.json",
+            Application.streamingAssetsPath + "/PersonData/data2.json",
+            Application.streamingAssetsPath + "/PersonData/data3.json",
+            Application.streamingAssetsPath + "/PersonData/data4.json",
+        };
+        string _path = paths[Random.Range(0, paths.Count)];
         return _path;
     }
 
@@ -52,12 +51,14 @@ public class GameManager : MonoBehaviour
     {
         StartCoroutine(SetInfo());
     }
-    
-    public PersonDataList PersonDataList = new PersonDataList();
+
+    public PersonDataList PersonDataList;
     public void ReadJson()
     {
         Debug.Log("Read STARTED");
-        string json;
+        string json = "";
+        PersonDataList.PersonData.Clear();
+        PersonDataList = new PersonDataList();
         if (Application.platform == RuntimePlatform.Android)
         {
             UnityWebRequest www = UnityWebRequest.Get(path);
@@ -128,6 +129,7 @@ public class PersonData
     public string name;
     public string photo;
 }
+
 [System.Serializable]
 public class PersonDataList
 {
