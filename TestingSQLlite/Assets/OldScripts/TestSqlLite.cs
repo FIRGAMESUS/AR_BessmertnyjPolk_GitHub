@@ -1,10 +1,12 @@
-﻿/*
+﻿
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Mono.Data.Sqlite;
 using System.Data;
+/*
 using System;
+using System.IO;
 using UnityEngine.UI;
 
 public class TestSqlLite : MonoBehaviour
@@ -15,7 +17,7 @@ public class TestSqlLite : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        SetConnection();
     }
 
     // Update is called once per frame
@@ -26,7 +28,7 @@ public class TestSqlLite : MonoBehaviour
 
     public void SetConnection()
     {
-        path = Application.streamingAssetsPath + "/data.bytes";
+        path = Application.streamingAssetsPath + "/data2.db";
 
         dbconnection = new SqliteConnection("URI=file:" + path);
         dbconnection.Open();

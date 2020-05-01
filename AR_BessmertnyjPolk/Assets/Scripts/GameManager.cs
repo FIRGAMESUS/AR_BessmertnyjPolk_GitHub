@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
@@ -10,75 +11,41 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     public Transform Tablets;
-    //public GameObject Tablet;
     public string url;
     Image image;
     TextMeshProUGUI text;
     public Sprite DefaultPhoto;
 
+    private const string DatabaseName = "data2.db";
 
-    private string path;
     private int tabletsCount;
 
     public void Start()
     {
         tabletsCount = Tablets.childCount;
-        path = RandomDataPath();
-
-
-        Debug.Log(path);
-
-
-        ReadJson();
+        ReadDataToList();
         UpdateTablets();
-        Debug.Log("Started");
     }
 
-    public string RandomDataPath()
+
+    public List<PersonData> personDatas;
+    public void ReadDataToList()
     {
-        List<string> paths = new List<string>()
-        {
-            Application.streamingAssetsPath + "/PersonData/data1.json",
-            Application.streamingAssetsPath + "/PersonData/data2.json",
-            Application.streamingAssetsPath + "/PersonData/data3.json",
-            Application.streamingAssetsPath + "/PersonData/data4.json",
-        };
-        string _path = paths[Random.Range(0, paths.Count)];
-        return _path;
+        var ds = new DataService("data2.db");
+        var people = ds.GetPersons();
+        personDatas = people.ToList();
+        Debug.Log(personDatas.Count);
     }
-
+    
     public void UpdateTablets()
     {
         StartCoroutine(SetInfo());
     }
 
-    public PersonDataList PersonDataList;
-    public void ReadJson()
-    {
-        Debug.Log("Read STARTED");
-        string json = "";
-        PersonDataList.PersonData.Clear();
-        PersonDataList = new PersonDataList();
-        if (Application.platform == RuntimePlatform.Android)
-        {
-            UnityWebRequest www = UnityWebRequest.Get(path);
-            www.SendWebRequest();
-            json = www.downloadHandler.text;
-        }
-        else
-        {
-            json = File.ReadAllText(path);
-        }
-        Debug.Log("Read json");
-        JsonUtility.FromJsonOverwrite(json, PersonDataList);
-        Debug.Log(PersonDataList.PersonData.Count);
-        Debug.Log("Read FINISHED");
-    }
-
     public void OpenURL()
     {
         Debug.Log("click");
-        Application.OpenURL(PersonDataList.PersonData[0].url);
+        //Application.OpenURL(PersonDataList.PersonData[0].url);
     }
     
 
@@ -86,20 +53,19 @@ public class GameManager : MonoBehaviour
     IEnumerator SetInfo()
     {
         List<int> currentPersons = new List<int>();
-        //List<int> currentTablets = new List<int>();
         int currentPerson;
         for (int i = 0; i < tabletsCount; i++)
         {
             do
             {
-                currentPerson = Random.Range(0, PersonDataList.PersonData.Count);
+                currentPerson = Random.Range(0, personDatas.Count);
             } while (currentPersons.IndexOf(currentPerson) >= 0);
             currentPersons.Add(currentPerson);
         }
         int id = 0;
         foreach (Transform Tablet in Tablets)
         {
-            var person = PersonDataList.PersonData[currentPersons[id]];
+            var person = personDatas[currentPersons[id]];
 
             Sprite photo;
             if (person.photo.IndexOf("svg") > 0) photo = DefaultPhoto;
@@ -108,9 +74,16 @@ public class GameManager : MonoBehaviour
                 UnityWebRequest www = UnityWebRequestTexture.GetTexture(person.photo);
                 yield return www.SendWebRequest();
 
-                if (www.isNetworkError || www.isHttpError) Debug.Log(www.error);
-                else myTexture = ((DownloadHandlerTexture)www.downloadHandler).texture;
-                photo = Sprite.Create((Texture2D)myTexture, new Rect(0, 0, myTexture.width, myTexture.height), Vector2.zero);
+                if (www.isNetworkError || www.isHttpError)
+                {
+                    Debug.Log(www.error);
+                    photo = DefaultPhoto;
+                }
+                else
+                {
+                    myTexture = ((DownloadHandlerTexture)www.downloadHandler).texture;
+                    photo = Sprite.Create((Texture2D)myTexture, new Rect(0, 0, myTexture.width, myTexture.height), Vector2.zero);
+                }
             }
 
             Tablet.GetChild(0).Find("Image").GetComponent<Image>().color = new Color(255, 255, 255, 1);
@@ -120,18 +93,4 @@ public class GameManager : MonoBehaviour
         }
     }
     
-}
-
-[System.Serializable]
-public class PersonData
-{
-    public string url;
-    public string name;
-    public string photo;
-}
-
-[System.Serializable]
-public class PersonDataList
-{
-    public List<PersonData> PersonData;
 }
