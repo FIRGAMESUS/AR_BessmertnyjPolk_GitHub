@@ -16,7 +16,7 @@ public class GameManager : MonoBehaviour
     TextMeshProUGUI text;
     public Sprite DefaultPhoto;
 
-    private const string DatabaseName = "data2.db";
+    private const string DatabaseName = "data.db";
 
     private int tabletsCount;
 
@@ -31,10 +31,10 @@ public class GameManager : MonoBehaviour
     public List<PersonData> personDatas;
     public void ReadDataToList()
     {
-        var ds = new DataService("data2.db");
+        var ds = new DataService(DatabaseName);
         var people = ds.GetPersons();
         personDatas = people.ToList();
-        Debug.Log(personDatas.Count);
+        Debug.Log("Загружено данных всего = " + personDatas.Count);
     }
     
     public void UpdateTablets()
