@@ -11,14 +11,12 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     public Transform Tablets;
-    public string url;
-    Image image;
-    TextMeshProUGUI text;
     public Sprite DefaultPhoto;
 
-    private const string DatabaseName = "data.db";
-
+    private string url;
     private int tabletsCount;
+
+    private const string DatabaseName = "data.db";
 
     public void Start()
     {
@@ -45,9 +43,9 @@ public class GameManager : MonoBehaviour
     public void OpenURL()
     {
         Debug.Log("click");
-        //Application.OpenURL(PersonDataList.PersonData[0].url);
+        //Application.OpenURL(personDatas[0].url);
     }
-    
+
 
     Texture myTexture;
     IEnumerator SetInfo()
