@@ -13,6 +13,8 @@ public class GameManager : MonoBehaviour
     public Transform Tablets;
     public Sprite DefaultPhoto;
 
+    TabletViewController TabletViewController;
+
     private string url;
     private int tabletsCount;
 
@@ -21,6 +23,7 @@ public class GameManager : MonoBehaviour
     public void Start()
     {
         tabletsCount = Tablets.childCount;
+        RenameTabltes();
         ReadDataToList();
         UpdateTablets();
     }
@@ -65,6 +68,8 @@ public class GameManager : MonoBehaviour
         {
             var person = personDatas[currentPersons[id]];
 
+            TabletViewController.SetData(person);
+
             Sprite photo;
             if (person.photo.IndexOf("svg") > 0) photo = DefaultPhoto;
             else
@@ -87,8 +92,19 @@ public class GameManager : MonoBehaviour
             Tablet.GetChild(0).Find("Image").GetComponent<Image>().color = new Color(255, 255, 255, 1);
             Tablet.GetChild(0).Find("Image").GetComponent<Image>().sprite = photo;
             Tablet.GetChild(0).Find("Text").GetComponent<TextMeshProUGUI>().text = person.name;
+
+            
+
             id++;
         }
     }
-    
+
+
+    public void RenameTabltes()
+    {
+        for (int i = 0; i < Tablets.childCount; i++)
+        {
+            Tablets.GetChild(i).name = "Tablet" + i;
+        }
+    }
 }
