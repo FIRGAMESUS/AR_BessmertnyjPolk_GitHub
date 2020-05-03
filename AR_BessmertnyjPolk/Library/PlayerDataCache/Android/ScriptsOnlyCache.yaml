@@ -69,43 +69,43 @@ ScriptsOnlyBuild:
     - Class: 109
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11202}
+      Script: {instanceID: 11230}
     - Class: 114
-      Script: {instanceID: 11446}
+      Script: {instanceID: 11470}
     - Class: 114
-      Script: {instanceID: 11676}
+      Script: {instanceID: 11700}
     - Class: 114
-      Script: {instanceID: 11732}
+      Script: {instanceID: 11756}
     - Class: 114
-      Script: {instanceID: 11852}
+      Script: {instanceID: 11876}
     - Class: 114
-      Script: {instanceID: 11944}
+      Script: {instanceID: 11968}
     - Class: 114
-      Script: {instanceID: 11982}
+      Script: {instanceID: 12006}
     - Class: 114
-      Script: {instanceID: 12454}
+      Script: {instanceID: 12478}
     - Class: 114
-      Script: {instanceID: 12716}
+      Script: {instanceID: 12740}
     - Class: 114
-      Script: {instanceID: 12730}
+      Script: {instanceID: 12754}
     - Class: 114
-      Script: {instanceID: 12746}
+      Script: {instanceID: 12770}
     - Class: 114
-      Script: {instanceID: 12922}
+      Script: {instanceID: 12946}
     - Class: 114
-      Script: {instanceID: 12976}
+      Script: {instanceID: 13000}
     - Class: 114
-      Script: {instanceID: 13048}
+      Script: {instanceID: 13072}
     - Class: 114
-      Script: {instanceID: 13078}
+      Script: {instanceID: 13100}
     - Class: 114
-      Script: {instanceID: 13240}
+      Script: {instanceID: 13262}
     - Class: 114
-      Script: {instanceID: 13256}
+      Script: {instanceID: 13278}
     - Class: 114
-      Script: {instanceID: 13400}
+      Script: {instanceID: 13420}
     - Class: 114
-      Script: {instanceID: 13508}
+      Script: {instanceID: 13528}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -762,4 +762,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/MainScene.unity
-  playerPath: C:/UnityEngine/UnityProjects/AR_BessmertnyjPolk_GitHub/AR_BessmertnyjPolk/Versions/PolkAR_0.1(2).aab
+  playerPath: C:/UnityEngine/UnityProjects/AR_BessmertnyjPolk_GitHub/AR_BessmertnyjPolk/Versions/PolkAR_0.2(4).aab
