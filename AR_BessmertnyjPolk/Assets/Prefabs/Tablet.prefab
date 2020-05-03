@@ -418,6 +418,7 @@ GameObject:
   - component: {fileID: 7723535812552978301}
   - component: {fileID: 7723535812552978300}
   - component: {fileID: 7723535812552978303}
+  - component: {fileID: 2714658590179740438}
   m_Layer: 0
   m_Name: Tablet
   m_TagString: Untagged
@@ -500,6 +501,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &2714658590179740438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7723535812552978302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8fcbc26711c5ad4bbcb23bc10feaa6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7723535812704743925
 GameObject:
   m_ObjectHideFlags: 0
