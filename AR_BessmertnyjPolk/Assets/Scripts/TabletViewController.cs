@@ -21,6 +21,7 @@ public class TabletViewController : MonoBehaviour
         {
             transform.GetChild(0).Find("Image").GetComponent<Image>().color = new Color(255, 255, 255, 1);
             transform.GetChild(0).Find("Image").GetComponent<Image>().sprite = downloadedSprite;
+            
         }));
         transform.GetChild(0).Find("Text").GetComponent<TextMeshProUGUI>().text = person.name;
     }

@@ -9,6 +9,7 @@ public class DownloadHelper : MonoBehaviour
 {
     public static DownloadHelper instance;
     public Sprite DefaultPhoto;
+    public GameManager GameManager;
 
     private void Awake()
     {
@@ -36,6 +37,7 @@ public class DownloadHelper : MonoBehaviour
                 downloadedSprite = Sprite.Create((Texture2D)myTexture, new Rect(0, 0, myTexture.width, myTexture.height), Vector2.zero);
             }
         }
+        GameManager.sliderValue++;
         callback(downloadedSprite);
     }
 }

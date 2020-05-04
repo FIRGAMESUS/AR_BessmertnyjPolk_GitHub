@@ -12,16 +12,26 @@ public class GameManager : MonoBehaviour
 {
     public Transform Tablets;
 
-    private string url;
     private int tabletsCount;
 
     private const string DatabaseName = "data.db";
 
+    public Slider slider;
+    public int sliderValue;
+
     private void Start()
     {
         tabletsCount = Tablets.childCount;
+        Debug.Log(tabletsCount);
+        slider.maxValue = tabletsCount;
         ReadDataToList();
         UpdateTablets();
+
+    }
+
+    private void Update()
+    {
+        slider.value = sliderValue;
     }
 
     public List<PersonData> PersonDataList;
@@ -35,6 +45,7 @@ public class GameManager : MonoBehaviour
     
     public void UpdateTablets()
     {
+        sliderValue = 0;
         SendDataToTablet();
     }
 
