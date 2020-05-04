@@ -1,8 +1,10 @@
 ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
+    - ButtonManager
     - DownloadHelper
     - GameManager
+    - MakeScreenshotByMouseClick
     - TabletViewController
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
@@ -26,7 +28,6 @@ ScriptsOnlyBuild:
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
-    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -89,29 +90,33 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12460}
     - Class: 114
-      Script: {instanceID: 12722}
+      Script: {instanceID: 12600}
     - Class: 114
-      Script: {instanceID: 12736}
+      Script: {instanceID: 12724}
     - Class: 114
-      Script: {instanceID: 12752}
+      Script: {instanceID: 12738}
     - Class: 114
-      Script: {instanceID: 12928}
+      Script: {instanceID: 12754}
     - Class: 114
-      Script: {instanceID: 12982}
+      Script: {instanceID: 12930}
     - Class: 114
-      Script: {instanceID: 13054}
+      Script: {instanceID: 12984}
     - Class: 114
-      Script: {instanceID: 13082}
+      Script: {instanceID: 13056}
     - Class: 114
-      Script: {instanceID: 13244}
+      Script: {instanceID: 13084}
     - Class: 114
-      Script: {instanceID: 13260}
+      Script: {instanceID: 13246}
     - Class: 114
-      Script: {instanceID: 13404}
+      Script: {instanceID: 13262}
     - Class: 114
-      Script: {instanceID: 13514}
+      Script: {instanceID: 13396}
     - Class: 114
-      Script: {instanceID: 15618}
+      Script: {instanceID: 13408}
+    - Class: 114
+      Script: {instanceID: 13518}
+    - Class: 114
+      Script: {instanceID: 17902}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -479,6 +484,12 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
+      Hash: 21c51dd3679c27a1fe492fd3bc2d3bb0
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DownloadHelper
+  - hash:
+      serializedVersion: 2
       Hash: 982acebdb29318e47aa2d3c2cb7e1539
     assemblyName: Unity.XR.ARFoundation.dll
     namespaceName: UnityEngine.XR.ARFoundation
@@ -665,6 +676,12 @@ ScriptsOnlyBuild:
     className: TMP_ColorGradient
   - hash:
       serializedVersion: 2
+      Hash: d7737a35547e661e540469ced76b87f3
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: MakeScreenshotByMouseClick
+  - hash:
+      serializedVersion: 2
       Hash: 20d20168517d1c0e098918311aa95bbb
     assemblyName: Unity.XR.ARFoundation.dll
     namespaceName: UnityEngine.XR.ARFoundation
@@ -773,11 +790,11 @@ ScriptsOnlyBuild:
     className: PlayableTrack
   - hash:
       serializedVersion: 2
-      Hash: 21c51dd3679c27a1fe492fd3bc2d3bb0
+      Hash: f77e4ef49c91153b362f6122da48b7e3
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
-    className: DownloadHelper
+    className: ButtonManager
   platform: 13
   scenePathNames:
   - Assets/Scenes/MainScene.unity
-  playerPath: C:/UnityEngine/UnityProjects/AR_BessmertnyjPolk_GitHub/AR_BessmertnyjPolk/Versions/PolkAR_0.4(6).aab
+  playerPath: C:/UnityEngine/UnityProjects/AR_BessmertnyjPolk_GitHub/AR_BessmertnyjPolk/Versions/PolkAR_0.5(7).aab

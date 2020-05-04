@@ -17,16 +17,15 @@ public class GameManager : MonoBehaviour
 
     private const string DatabaseName = "data.db";
 
-    public void Start()
+    private void Start()
     {
         tabletsCount = Tablets.childCount;
         ReadDataToList();
         UpdateTablets();
     }
 
-
     public List<PersonData> PersonDataList;
-    public void ReadDataToList()
+    private void ReadDataToList()
     {
         var ds = new DataService(DatabaseName);
         var people = ds.GetPersons();
@@ -39,7 +38,7 @@ public class GameManager : MonoBehaviour
         SendDataToTablet();
     }
 
-    public void SendDataToTablet()
+    private void SendDataToTablet()
     {
         List<int> currentPersons = new List<int>();
         int currentPerson;
