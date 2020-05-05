@@ -32,6 +32,8 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         slider.value = sliderValue;
+        if (slider.value <= 0 || slider.value >= tabletsCount) slider.gameObject.SetActive(false);
+        else slider.gameObject.SetActive(true);
     }
 
     public List<PersonData> PersonDataList;

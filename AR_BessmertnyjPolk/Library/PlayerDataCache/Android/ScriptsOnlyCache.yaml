@@ -36,6 +36,7 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
     - UnityEngine.UI.Image
+    - UnityEngine.UI.Slider
   sceneClasses:
     Assets/Scenes/MainScene.unity:
     - Class: 1
@@ -67,51 +68,53 @@ ScriptsOnlyBuild:
     - Class: 109
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11206}
+      Script: {instanceID: 11208}
     - Class: 114
-      Script: {instanceID: 11446}
+      Script: {instanceID: 11464}
     - Class: 114
-      Script: {instanceID: 11518}
+      Script: {instanceID: 11538}
     - Class: 114
-      Script: {instanceID: 11678}
+      Script: {instanceID: 11710}
     - Class: 114
-      Script: {instanceID: 11734}
+      Script: {instanceID: 11766}
     - Class: 114
-      Script: {instanceID: 11854}
+      Script: {instanceID: 11892}
     - Class: 114
-      Script: {instanceID: 11946}
+      Script: {instanceID: 11988}
     - Class: 114
-      Script: {instanceID: 11984}
+      Script: {instanceID: 12032}
     - Class: 114
-      Script: {instanceID: 12142}
+      Script: {instanceID: 12196}
     - Class: 114
-      Script: {instanceID: 12462}
+      Script: {instanceID: 12548}
     - Class: 114
-      Script: {instanceID: 12602}
+      Script: {instanceID: 12694}
     - Class: 114
-      Script: {instanceID: 12726}
+      Script: {instanceID: 12826}
     - Class: 114
-      Script: {instanceID: 12740}
+      Script: {instanceID: 12840}
     - Class: 114
-      Script: {instanceID: 12756}
+      Script: {instanceID: 12856}
     - Class: 114
-      Script: {instanceID: 12932}
+      Script: {instanceID: 13048}
     - Class: 114
-      Script: {instanceID: 12986}
+      Script: {instanceID: 13108}
     - Class: 114
-      Script: {instanceID: 13058}
+      Script: {instanceID: 13186}
     - Class: 114
-      Script: {instanceID: 13086}
+      Script: {instanceID: 13216}
     - Class: 114
-      Script: {instanceID: 13248}
+      Script: {instanceID: 13384}
     - Class: 114
-      Script: {instanceID: 13264}
+      Script: {instanceID: 13400}
     - Class: 114
-      Script: {instanceID: 13398}
+      Script: {instanceID: 13538}
     - Class: 114
-      Script: {instanceID: 13410}
+      Script: {instanceID: 13550}
     - Class: 114
-      Script: {instanceID: 13520}
+      Script: {instanceID: 13668}
+    - Class: 114
+      Script: {instanceID: 13702}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -135,6 +138,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: CanvasScaler
+  - hash:
+      serializedVersion: 2
+      Hash: e617e51cb542e31170b989416e02ce44
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: AndroidGoodiesExamples
+    className: GPSTest
   - hash:
       serializedVersion: 2
       Hash: c42672c997f8be6b1aa86a927ebea785
@@ -281,7 +290,7 @@ ScriptsOnlyBuild:
     className: AnimationTrack
   - hash:
       serializedVersion: 2
-      Hash: 5d35812c47c9a12891a64e22d1f48a99
+      Hash: 0084a854816fdb47ba4e02a00edab962
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager
@@ -357,6 +366,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: ControlPlayableAsset
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: AndroidGoodiesExamples
+    className: AlarmClockTest
+  - hash:
+      serializedVersion: 2
+      Hash: 1be571803747c3e936c3cce55a9d3afd
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: AndroidGoodiesExamples
+    className: DateTimePickerTest
   - hash:
       serializedVersion: 2
       Hash: b8a5e8091ab0b8861d2add371082c5e0
@@ -437,6 +458,12 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
+      Hash: 1028c39545bcfa841aaab54121e69a47
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: AndroidGoodiesExamples
+    className: OpenSettingsTest
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -453,6 +480,18 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
     className: RemoteTestResultSender
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: AndroidGoodiesExamples
+    className: DialTest
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: AndroidGoodiesExamples
+    className: CalendarTest
   - hash:
       serializedVersion: 2
       Hash: 4fd8bf02e3089425d3502e26c44ba31a
@@ -473,6 +512,12 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
+      Hash: 3f5a6b1019327c1b2ea41cb14d9c1879
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: AndroidGoodiesExamples
+    className: AndroidGoodiesDemoController
+  - hash:
+      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: Unity.XR.ARFoundation.dll
     namespaceName: UnityEngine.XR.ARFoundation
@@ -485,7 +530,7 @@ ScriptsOnlyBuild:
     className: VerticalLayoutGroup
   - hash:
       serializedVersion: 2
-      Hash: 21c51dd3679c27a1fe492fd3bc2d3bb0
+      Hash: 5815d2b8709e72a1a12258c22d68f6a5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: DownloadHelper
@@ -557,6 +602,12 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
+      Hash: e5561d62d284f40397f76ca3861dc668
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: AndroidGoodiesExamples
+    className: OtherGoodiesTest
+  - hash:
+      serializedVersion: 2
       Hash: fcc7ae5ff1b0c9cad5865d5b6cee016a
     assemblyName: Unity.XR.ARFoundation.dll
     namespaceName: UnityEngine.XR.ARFoundation
@@ -567,6 +618,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.XR.ARFoundation.dll
     namespaceName: UnityEngine.XR.ARFoundation
     className: ARTrackedImage
+  - hash:
+      serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: DeadMosquito.AndroidGoodies.Internal
+    className: GoodiesSceneHelper
   - hash:
       serializedVersion: 2
       Hash: ca2a58dd7363525cbd2f65b2a150b41b
@@ -587,6 +644,12 @@ ScriptsOnlyBuild:
     className: ARFaceManager
   - hash:
       serializedVersion: 2
+      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: AndroidGoodiesExamples
+    className: AlertDialogTest
+  - hash:
+      serializedVersion: 2
       Hash: 8001a5f7502aab37e42206da015e6914
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -597,6 +660,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.XR.ARFoundation.dll
     namespaceName: UnityEngine.XR.ARFoundation
     className: ARPointCloudManager
+  - hash:
+      serializedVersion: 2
+      Hash: 508969e4a7bc6edd3fc06197858e2df1
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: AndroidGoodiesExamples
+    className: NativeShareTest
+  - hash:
+      serializedVersion: 2
+      Hash: 1597bb066ff56feb41eea36bb0f872a5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: AndroidGoodiesExamples
+    className: OtherInfoTest
   - hash:
       serializedVersion: 2
       Hash: f336e086360abe49a3323e5f1583c35a
@@ -633,6 +708,12 @@ ScriptsOnlyBuild:
     assemblyName: Unity.XR.ARFoundation.dll
     namespaceName: UnityEngine.XR.ARFoundation
     className: ARPointCloudMeshVisualizer
+  - hash:
+      serializedVersion: 2
+      Hash: 916bc96938ed1941bfa7416a4cb2657f
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: AndroidGoodiesExamples
+    className: EnableOnClick
   - hash:
       serializedVersion: 2
       Hash: 893dbdbfe611d62e230a686ea89f1efd
@@ -789,85 +870,7 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
-  - hash:
-      serializedVersion: 2
-      Hash: e617e51cb542e31170b989416e02ce44
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: AndroidGoodiesExamples
-    className: GPSTest
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: AndroidGoodiesExamples
-    className: AlarmClockTest
-  - hash:
-      serializedVersion: 2
-      Hash: 1be571803747c3e936c3cce55a9d3afd
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: AndroidGoodiesExamples
-    className: DateTimePickerTest
-  - hash:
-      serializedVersion: 2
-      Hash: 1028c39545bcfa841aaab54121e69a47
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: AndroidGoodiesExamples
-    className: OpenSettingsTest
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: AndroidGoodiesExamples
-    className: DialTest
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: AndroidGoodiesExamples
-    className: CalendarTest
-  - hash:
-      serializedVersion: 2
-      Hash: 3f5a6b1019327c1b2ea41cb14d9c1879
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: AndroidGoodiesExamples
-    className: AndroidGoodiesDemoController
-  - hash:
-      serializedVersion: 2
-      Hash: e5561d62d284f40397f76ca3861dc668
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: AndroidGoodiesExamples
-    className: OtherGoodiesTest
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: DeadMosquito.AndroidGoodies.Internal
-    className: GoodiesSceneHelper
-  - hash:
-      serializedVersion: 2
-      Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: AndroidGoodiesExamples
-    className: AlertDialogTest
-  - hash:
-      serializedVersion: 2
-      Hash: 508969e4a7bc6edd3fc06197858e2df1
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: AndroidGoodiesExamples
-    className: NativeShareTest
-  - hash:
-      serializedVersion: 2
-      Hash: 1597bb066ff56feb41eea36bb0f872a5
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: AndroidGoodiesExamples
-    className: OtherInfoTest
-  - hash:
-      serializedVersion: 2
-      Hash: 916bc96938ed1941bfa7416a4cb2657f
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: AndroidGoodiesExamples
-    className: EnableOnClick
   platform: 13
   scenePathNames:
   - Assets/Scenes/MainScene.unity
-  playerPath: C:/UnityEngine/UnityProjects/AR_BessmertnyjPolk_GitHub/AR_BessmertnyjPolk/Versions/PolkAR_0.6(8).apk
+  playerPath: C:/UnityEngine/UnityProjects/AR_BessmertnyjPolk_GitHub/AR_BessmertnyjPolk/Versions/PolkAR_0.6(8).aab
