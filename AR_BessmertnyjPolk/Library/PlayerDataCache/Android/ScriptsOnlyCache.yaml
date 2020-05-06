@@ -68,53 +68,53 @@ ScriptsOnlyBuild:
     - Class: 109
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11208}
+      Script: {instanceID: 11206}
     - Class: 114
-      Script: {instanceID: 11464}
+      Script: {instanceID: 11462}
     - Class: 114
-      Script: {instanceID: 11538}
+      Script: {instanceID: 11536}
     - Class: 114
-      Script: {instanceID: 11710}
+      Script: {instanceID: 11708}
     - Class: 114
-      Script: {instanceID: 11766}
+      Script: {instanceID: 11764}
     - Class: 114
-      Script: {instanceID: 11892}
+      Script: {instanceID: 11890}
     - Class: 114
-      Script: {instanceID: 11988}
+      Script: {instanceID: 11986}
     - Class: 114
-      Script: {instanceID: 12032}
+      Script: {instanceID: 12030}
     - Class: 114
-      Script: {instanceID: 12196}
+      Script: {instanceID: 12194}
     - Class: 114
-      Script: {instanceID: 12548}
+      Script: {instanceID: 12546}
     - Class: 114
-      Script: {instanceID: 12694}
+      Script: {instanceID: 12692}
     - Class: 114
-      Script: {instanceID: 12826}
+      Script: {instanceID: 12824}
     - Class: 114
-      Script: {instanceID: 12840}
+      Script: {instanceID: 12838}
     - Class: 114
-      Script: {instanceID: 12856}
+      Script: {instanceID: 12854}
     - Class: 114
-      Script: {instanceID: 13048}
+      Script: {instanceID: 13046}
     - Class: 114
-      Script: {instanceID: 13108}
+      Script: {instanceID: 13106}
     - Class: 114
-      Script: {instanceID: 13186}
+      Script: {instanceID: 13184}
     - Class: 114
-      Script: {instanceID: 13216}
+      Script: {instanceID: 13214}
     - Class: 114
-      Script: {instanceID: 13384}
+      Script: {instanceID: 13382}
     - Class: 114
-      Script: {instanceID: 13400}
+      Script: {instanceID: 13398}
     - Class: 114
-      Script: {instanceID: 13538}
+      Script: {instanceID: 13536}
     - Class: 114
-      Script: {instanceID: 13550}
+      Script: {instanceID: 13548}
     - Class: 114
-      Script: {instanceID: 13668}
+      Script: {instanceID: 13666}
     - Class: 114
-      Script: {instanceID: 13702}
+      Script: {instanceID: 13700}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -873,4 +873,4 @@ ScriptsOnlyBuild:
   platform: 13
   scenePathNames:
   - Assets/Scenes/MainScene.unity
-  playerPath: C:/UnityEngine/UnityProjects/AR_BessmertnyjPolk_GitHub/AR_BessmertnyjPolk/Versions/PolkAR_0.6(8).aab
+  playerPath: C:/UnityEngine/UnityProjects/AR_BessmertnyjPolk_GitHub/AR_BessmertnyjPolk/Versions/PolkAR_1.0(10).aab
